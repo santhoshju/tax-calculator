@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Tax-calculator</title>
+</head>
+
+<body>
+  <div class="bodyContainer">
+    <div class="formContainer">
+      <form class="formFields">
+        <div class="inputContainers">
+          <label for="">Enter Gross Annual Income <i class="fa-regular fa-circle-question"></i>
+            <p class="hoverMessage">Gross Annual Income is your Total Salary in a year before any Deductions</p>
+          </label>
+          <input type="text" class="inputContainer" id="grossAnnualIncome">
+          <div class="error"> <i class="fa-solid fa-circle-exclamation"></i>
+            <p class="validation">please enter numbers only</p>
+          </div>
+        </div>
+        <div class="inputContainers">
+          <label for="">Enter Extra Income <i class="fa-regular fa-circle-question"></i>
+            <p class="hoverMessage"> extra income is any additional income that is not part of your regular salary</p>
+          </label>
+          <input type="text" class="inputContainer" id="extraIncome">
+          <div class="error"><i class="fa-solid fa-circle-exclamation"></i>
+            <p class="validation">please enter numbers only</p>
+          </div>
+        </div>
+        <div class="inputContainers">
+          <label for="">Enter Age Group <i class="fa-regular fa-circle-question"></i>
+            <p class="hoverMessage">age group is the range of ages that an individual falls into for tax purposes</p>
+          </label>
+          <select name="" id="ageGroup" class="inputContainer">
+            <option value="">select age Limit</option>
+            <option value="&lt;40">Below 40 </option>
+            <option value="&ge;40&lt;60"> 40 to 60</option>
+            <option value="&ge;60">Above 60</option>
+          </select>
+          <div class="error"><i class="fa-solid fa-circle-exclamation"></i>
+            <p class="validation">please select the age limit</p>
+          </div>
+        </div>
+        <div class="inputContainers">
+          <label for="">Enter Total Applicable Deductions <i class="fa-regular fa-circle-question"></i>
+            <p class="hoverMessage arrow-bottom">Deductions in the context of a  amounts that can be subtracted from a person's total taxable income</p>
+          </label>
+          <input type="text" class="inputContainer" id="deductions">
+          <div class="error"><i class="fa-solid fa-circle-exclamation"></i>
+            <p class="validation">please enter numbers only</p>
+          </div>
+        </div>
+        <div class="inputContainers">
+          <input type="submit" value="Submit" id="submit" class="submitButton">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p id="taxResult"></p>
+      <button class="close">Close</button>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/f536855017.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
